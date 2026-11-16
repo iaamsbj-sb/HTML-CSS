@@ -1,124 +1,189 @@
-.navbar{
-    border: 2px solid black;
-    height: 10vh;
-    position:fixed;
+/* Common styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fb;
+    color: #222;
+}
+
+
+/* Navbar */
+
+.navbar {
+    height: 70px;
+    background-color: #172554;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    position: sticky;
     top: 0;
-    left:0;
-    right:0;
-    background-color: black;
-    
-}
-h1{
-    color: green;
 }
 
-.info ul{
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
     display: flex;
-    list-style: none;
-    align-items: center;
-    justify-content: space-around;
-    padding-bottom: 2px;
-}
-.info ul a{
-    color: aliceblue;
-    text-decoration: none;
-    
-}
-.info ul a:hover{
-    color: blue
+    gap: 40px;
     
 }
 
-.main-container{
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+.user img{
+    width: 30px;
+    height: 20px;
+    object-fit: contain;
+    margin-bottom: -6px;
+    cursor: pointer;
+    border-radius: 40%;
+}
+
+
+/* Main Layout */
+
+.main-container {
+    display: flex;
+    min-height: calc(100vh - 130px);
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    width: 240px;
+    background-color: white;
+    padding: 25px 15px;
+    border-right: 1px solid #ddd;
+    flex-shrink: 0;
+}
+
+.sidebar h3 {
+    margin: 15px 10px;
+    color: #172554;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #444;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+
+/* Main Content */
+
+.content {
+    flex: 1;
+    padding: 35px;
+    min-width: 0;
+}
+
+
+/* Welcome Section */
+
+.welcome {
+    background-color: #dbeafe;
+    padding: 40px;
+    border-radius: 12px;
+    margin-bottom: 35px;
+}
+
+.welcome h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #172554;
+}
+
+.welcome p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* Course Cards */
+
+.content h2 {
+    margin-bottom: 25px;
+}
+
+.card-container {
     display: grid;
-    grid-template-columns: 200px 1fr 200px;
-    height:100vh;
-    margin-top: 100px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
 }
 
-.sidebar{
-    background-color: #9e9e9e;
-    position: fixed;
-    top:77px;
-    left:0px;
-    width:300px;
-    bottom:0;
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
-.topic ul{
-     list-style: none;
-     padding-top: 42px;
-     display: flex;
-     flex-direction: column;
-     gap: 10vh;
-     
+.card img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 15px;
 }
 
-.content{
-    /* border: 2px solid black; */
-    margin-left: 300px;
-    width: 70rem;
-}
-.topic ul li a{
-    color: black;
-    text-decoration: none;
+.card h3 {
+    margin-bottom: 12px;
 }
 
-.topic ul li a:hover{
-    color: blue;
-    
-}
-.btn{
-    color: green;
-}
-.button{
-    display: flex;
-    gap: 90%;
-}
-.card-container{
-display: flex;
-}
-.card-1 img{
-    margin-top: 40px;
-    width: 50%;
-    margin-left: 50px;
+.card p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
-.profile-1 img{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-left: 50px;
+
+/* Footer */
+
+.footer {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
-.card-2 img{
-     margin-top: 40px;
-    width: 50%;
-    margin-left: 50px;
-}
 
-.profile-2 img{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-left: 50px;
-}
-
-.img-desc{
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.card-3 img{
-     margin-top: 40px;
-    width: 50%;
-    margin-left: 50px;
-}
-
-.profile-3 img{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-left: 50px;
-}
